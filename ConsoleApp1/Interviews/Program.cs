@@ -55,4 +55,5 @@ string binaryString = "011100";
 //new Palindrome().IsPalindrome(12321);
 //new RomanToInt().Convert("MCMXCIV");
 
-new MergeTwoSortedList().Test();
+//new MergeTwoSortedList().Test();
+new LongCommonPrefix().Test();
