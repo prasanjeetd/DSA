@@ -11,11 +11,11 @@ namespace ConsoleApp1.LeetCode
         public void Test()
         {
 
-            var param = new string[] { "flower", "flow", "flight" };
+            var param = new string[] { "flow", "flower",  "flight" };
             //var param = new string[] { "", "b"};
             //var param = new string[] { "a", "ac" };
 
-            var result = Get1(param);
+            var result = Get2(param);
             Console.WriteLine(result);
 
             /*
@@ -108,5 +108,77 @@ namespace ConsoleApp1.LeetCode
             return prefix;
         }
 
+        public string Get2(string[] strs)
+        {
+            /*
+             * flower
+             * flow
+             * flight
+             * 
+             * indexOf => 
+             * 1. first = flower
+             * first => flower = yes
+             * 
+             * from starting to end
+             * flower  => flow => flow
+             * 0123
+             *   prefix = flow 
+             *   prefix == "" 
+             * flower => flow
+             * prefix= flow
+             * flight
+             *  prefix => flow => flight = yes
+             *  flow = flo=> flight = yes
+             *  flo => fl => flight = yes
+             *  fl => f => 
+             * 
+             */
+
+            string prefix = strs[0];
+
+            for (int i = 1; i < strs.Length; i++)
+            {
+                string word = strs[i];
+
+                var loopBreak = word.IndexOf(prefix) != 0;
+
+                while (loopBreak)
+                {
+                    prefix =  prefix.Substring(0, prefix.Length - 1);
+
+                    if (prefix == "")
+                        return "";
+
+                    loopBreak = word.IndexOf(prefix) != 0;
+                }
+            }
+
+
+            /*
+             * flower , flow, flight
+             * prefix = flower
+             * 
+             * word = flow
+             * flow => flower = no
+             * prefix = flowe
+             * flow => flowe = no
+             * prefix = flow
+             * flow = flow = yes
+             *
+             * prefix = flow
+             * 
+             * word = flight
+             * flight => flow = no
+             * prefix = flo
+             * flight => flo = no
+             * prefix= fl
+             * flight = fl = yes
+             * 
+             * prefix= fl
+             * 
+             * 
+             */
+            return prefix;
+        }
     }
 }
