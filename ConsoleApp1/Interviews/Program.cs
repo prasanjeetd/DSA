@@ -56,4 +56,5 @@ string binaryString = "011100";
 //new RomanToInt().Convert("MCMXCIV");
 
 //new MergeTwoSortedList().Test();
-new LongCommonPrefix().Test();
+//new LongCommonPrefix().Test();
+new RemoveDuplicatesFromArray().Test();
