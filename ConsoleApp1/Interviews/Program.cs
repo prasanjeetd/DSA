@@ -57,4 +57,6 @@ string binaryString = "011100";
 
 //new MergeTwoSortedList().Test();
 //new LongCommonPrefix().Test();
-new RemoveDuplicatesFromArray().Test();
+//new RemoveDuplicatesFromArray().Test();
+//new RemoveElementAlgo().Test();
+new IndexInString().Test();
