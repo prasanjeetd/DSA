@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using ConsoleApp1;
+using ConsoleApp1.CSharp;
 using ConsoleApp1.Interviews;
 using ConsoleApp1.LeetCode;
 
@@ -59,4 +60,6 @@ string binaryString = "011100";
 //new LongCommonPrefix().Test();
 //new RemoveDuplicatesFromArray().Test();
 //new RemoveElementAlgo().Test();
-new IndexInString().Test();
+//new IndexInString().Test();
+//new CollectionTest().Test();
+new PlusOneAlgo().Test();
