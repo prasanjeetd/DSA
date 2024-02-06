@@ -62,4 +62,7 @@ string binaryString = "011100";
 //new RemoveElementAlgo().Test();
 //new IndexInString().Test();
 //new CollectionTest().Test();
-new PlusOneAlgo().Test();
+//new PlusOneAlgo().Test();
+//new AddBinaryAlgo().Test();
+//new SquareRoot().Test();
+new ClimbingStairsAlgo().Test();
