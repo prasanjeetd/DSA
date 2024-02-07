@@ -65,4 +65,5 @@ string binaryString = "011100";
 //new PlusOneAlgo().Test();
 //new AddBinaryAlgo().Test();
 //new SquareRoot().Test();
-new ClimbingStairsAlgo().Test();
+//new ClimbingStairsAlgo().Test();
+new RemoveDuplicateFromSortedList().Test();

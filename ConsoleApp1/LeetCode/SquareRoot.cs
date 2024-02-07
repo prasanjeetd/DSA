@@ -15,7 +15,7 @@ namespace ConsoleApp1.LeetCode
              * return the square root of x rounded down to the nearest integer. 
              * The returned integer should be non-negative as well
              */
-            int result = MySqrt(4);
+            int result = MySqrt(9);
         }
 
         public int MySqrt(int x)
