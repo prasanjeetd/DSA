@@ -3,6 +3,7 @@ using ConsoleApp1;
 using ConsoleApp1.CSharp;
 using ConsoleApp1.Interviews;
 using ConsoleApp1.LeetCode;
+using ConsoleApp1.TakeUForward;
 
 Console.WriteLine("Hello, World!");
 
@@ -68,4 +69,5 @@ string binaryString = "011100";
 //new ClimbingStairsAlgo().Test();
 //new RemoveDuplicateFromSortedList().Test();
 //new MergeSortedArray().Test();
-new BinaryTreeTraversal().Test();
+//new BinaryTreeTraversal().Test();
+new Paterrn().Test();
