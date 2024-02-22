@@ -4,6 +4,7 @@ using ConsoleApp1.CSharp;
 using ConsoleApp1.Interviews;
 using ConsoleApp1.LeetCode;
 using ConsoleApp1.TakeUForward;
+using System.Text;
 
 Console.WriteLine("Hello, World!");
 
@@ -70,4 +71,7 @@ string binaryString = "011100";
 //new RemoveDuplicateFromSortedList().Test();
 //new MergeSortedArray().Test();
 //new BinaryTreeTraversal().Test();
-new Paterrn().Test();
+//new Paterrn().Test();
+
+
+

@@ -18,6 +18,8 @@ namespace ConsoleApp1.TakeUForward
             Print6();
             Print7();
             Print8();
+            Print9();
+            Print10();
         }
 
         public void Print1()
@@ -221,5 +223,105 @@ namespace ConsoleApp1.TakeUForward
                 Console.WriteLine();
             }
         }
+
+        public void Print9()
+        {
+            //*
+            //**
+            //***
+            //**
+            //*
+
+            int n = 6;
+
+            for (int i = 0; i < n; i++)
+            {
+                // Print Stars
+
+                int stars = i + 1;
+
+                for (int j = 0; j < stars; j++)
+                {
+                    Console.Write("*");
+                }
+
+                // Print space
+
+                int space = n - i + 1;
+
+                for (int j = 0; j < space; j++)
+                {
+                    Console.Write(" ");
+                }
+
+                Console.WriteLine("");
+            }
+
+            for (int i = 0; i < n - 1; i++)
+            {
+                // Print stars
+                int space = i + 1;
+                int stars = n - space;
+
+                for (int j = 0; j < stars; j++)
+                {
+                    Console.Write("*");
+                }
+
+                // Print space
+                for (int j = 0; j < space; j++)
+                {
+                    Console.Write(" ");
+                }
+
+                Console.WriteLine();
+            }
+        }
+
+        public void Print10()
+        {
+            int n = 6;
+            Console.WriteLine();
+
+            for (int i = 1; i <= 2 * n - 1; i++)
+            {
+                int stars = i;
+
+                if (i > n)
+                    stars = 2 * n - i;
+
+                for (int j = 0; j < stars; j++)
+                {
+                    Console.Write("*");
+                }
+
+                Console.WriteLine();
+            }
+        }
+
+
+        public void StringCount()
+        {
+            var arr = new string[] { "Hello", "Xyz", "Hello", "Abc" };
+
+            var map = new Dictionary<string, int>();
+
+            foreach (string s in arr)
+            {
+                if (map.ContainsKey(s))
+                {
+                    map[s] += 1;
+                }
+                else { 
+                    map[s] = 1; 
+                }
+            }
+
+            Console.WriteLine();
+
+        }
+
     }
+
+
 }
