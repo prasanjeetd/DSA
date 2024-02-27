@@ -80,4 +80,8 @@ string binaryString = "011100";
 //AsyncEnumerableTest a = new();
 //await a.Test();
 
-new ThreadLock().Test();
+//new ThreadLock().Test();
+//new ManualResetEventLock().Test();
+//new AutoResetEventLock().Test();
+//new MutexLock().Test();
+//new SemaphoreLock().Test();
