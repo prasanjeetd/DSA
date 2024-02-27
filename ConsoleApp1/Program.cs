@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using ConsoleApp1;
 using ConsoleApp1.CSharp;
+using ConsoleApp1.CSharp.Threadings;
+using ConsoleApp1.Design_Patterns;
 using ConsoleApp1.Interviews;
 using ConsoleApp1.LeetCode;
 using ConsoleApp1.TakeUForward;
@@ -73,5 +75,9 @@ string binaryString = "011100";
 //new BinaryTreeTraversal().Test();
 //new Paterrn().Test();
 
+//DecoratorTester.Test();
 
+//AsyncEnumerableTest a = new();
+//await a.Test();
 
+new ThreadLock().Test();
