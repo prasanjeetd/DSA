@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1.CSharp.Threadings
+namespace ConsoleApp1.CSharp.Threadings.Locking
 {
-    public class AutoResetEventLock
+    public class MutexLock
     {
-        private AutoResetEvent _are = new(true);
+        private Mutex _mutex = new Mutex();
 
         public void Test()
         {
@@ -17,15 +17,19 @@ namespace ConsoleApp1.CSharp.Threadings
             {
                 new Thread(Write).Start();
             }
+
+            Thread.Sleep(1000);
+            //_mutex.ReleaseMutex();  // Will throw error
         }
+
         public void Write()
         {
             Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId} waiting...");
-            _are.WaitOne();
+            _mutex.WaitOne();
             Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId} writing...");
             Thread.Sleep(5000);
             Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId} writing completed...");
-            _are.Set();
+            _mutex.ReleaseMutex();
         }
     }
 }

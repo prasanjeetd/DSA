@@ -85,3 +85,7 @@ string binaryString = "011100";
 //new AutoResetEventLock().Test();
 //new MutexLock().Test();
 //new SemaphoreLock().Test();
+
+//new SafeSendClient().Test();
+
+await (new ThreadException()).Test();

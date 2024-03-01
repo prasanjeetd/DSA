@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1.Interviews
+namespace ConsoleApp1.CSharp
 {
-    public class SherWeb
+    public class DelegateUsage
     {
     }
 }

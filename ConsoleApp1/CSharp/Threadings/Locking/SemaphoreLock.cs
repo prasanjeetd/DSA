@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1.CSharp.Threadings
+namespace ConsoleApp1.CSharp.Threadings.Locking
 {
     public class SemaphoreLock
     {

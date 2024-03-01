@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1.CSharp.Threadings
+namespace ConsoleApp1.CSharp.Threadings.Locking
 {
     public class ThreadLock
     {
-        private Object _locker = new Object();
+        private object _locker = new object();
 
         public void Test()
         {
@@ -38,7 +38,7 @@ namespace ConsoleApp1.CSharp.Threadings
 
     public class MonitorLock
     {
-        private Object _locker = new Object();
+        private object _locker = new object();
 
         public void DoWork()
         {
@@ -65,5 +65,5 @@ namespace ConsoleApp1.CSharp.Threadings
         }
     }
 
-   
+
 }
