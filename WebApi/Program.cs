@@ -1,13 +1,34 @@
 using WebApi.Middlewares;
+using WebApi.MultipleImpInterfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var services = builder.Services;
+services.AddTransient<ServiceA>();
+services.AddTransient<ServiceB>();
+services.AddTransient<ServiceC>();
+
+services.AddTransient<ServiceResolver>(serviceProvider => key =>
+{
+    switch (key)
+    {
+        case "A":
+            return serviceProvider.GetService<ServiceA>();
+        case "B":
+            return serviceProvider.GetService<ServiceB>();
+        case "C":
+            return serviceProvider.GetService<ServiceC>();
+        default:
+            throw new KeyNotFoundException(); // or maybe return null, up to you
+    }
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddTransient<FactoryActivatedMiddleware>();
 
 var app = builder.Build();
 
@@ -19,7 +40,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-builder.Services.AddTransient<FactoryActivatedMiddleware>();
 
 app.UseMiddleware<ConventionalMiddleware>();
 app.UseMiddleware<FactoryActivatedMiddleware>();

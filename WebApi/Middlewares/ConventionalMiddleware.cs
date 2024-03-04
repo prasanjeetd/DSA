@@ -9,7 +9,7 @@
             _next = next;
         }
 
-        public async void Invoke(HttpContext context, ILogger logger)
+        public async Task Invoke(HttpContext context)
         {
             var keyValue = context.Request.Query["key"];
 
