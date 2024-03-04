@@ -1,5 +1,6 @@
 using WebApi.Middlewares;
 using WebApi.MultipleImpInterfaces;
+using WebApi.OptionPattern;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +30,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<FactoryActivatedMiddleware>();
+
+builder.Services.Configure<PositionOptions>(
+    builder.Configuration.GetSection(PositionOptions.Position));
 
 var app = builder.Build();
 
