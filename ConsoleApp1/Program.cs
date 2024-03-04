@@ -6,6 +6,7 @@ using ConsoleApp1.Design_Patterns;
 using ConsoleApp1.Interviews;
 using ConsoleApp1.LeetCode;
 using ConsoleApp1.TakeUForward;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
 Console.WriteLine("Hello, World!");
@@ -88,4 +89,7 @@ string binaryString = "011100";
 
 //new SafeSendClient().Test();
 
-await (new ThreadException()).Test();
+//await (new ThreadException()).Test();
+//await (new WaitAllAndWhenAll()).Test();
+new WaitAllAndWhenAll().Test1();
+

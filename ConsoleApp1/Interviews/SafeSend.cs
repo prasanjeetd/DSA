@@ -20,6 +20,58 @@ namespace ConsoleApp1.Interviews
         {
             return Name + _message;
         }
+
+        /*
+ *  boxes =h:0.5 , 1 ,1.5,2,2.5,3
+ *  
+ *  room =>
+ *  
+ *  h
+ *  
+ *  3
+ *  2.5
+ *  
+ *  /
+ *  
+ *  /
+ *  
+ *  15 = 3 + 2.5 + 2 +
+ *  
+ *  15 = 15 -3 = 12
+ *  12 = 
+ *  
+ *  
+ */
+
+        double[] getBoxes(double roomHeight)
+        {
+            var heighBoxes = new double[] { 0.5, 1, 1.5, 2, 2.5, 3 };
+
+
+            int j = heighBoxes.Length - 1;
+
+            var boxes = new List<double>();
+
+            var next = roomHeight;
+
+            while (j >= 0 || next == roomHeight)
+            {
+                if (heighBoxes[j] > next)
+                {
+                    j--;
+                    continue;
+                }
+
+                next = next - heighBoxes[j];
+                boxes.Add(heighBoxes[j]);
+
+                j--;
+
+            }
+
+            return boxes.ToArray();
+
+        }
     }
 
     public class SafeSendClient
@@ -76,4 +128,6 @@ namespace ConsoleApp1.Interviews
             return true;
         }
     }
+
+
 }
