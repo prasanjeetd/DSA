@@ -21,6 +21,7 @@ namespace ConsoleApp1.CSharp.Threadings
             Task.WaitAll(t1, t2);
 
             Console.WriteLine("Completed Task by wait all");
+            await Task.WhenAll(t1, t2);
 
             var t3 = Diplay2();
             var t4 = Diplay3();

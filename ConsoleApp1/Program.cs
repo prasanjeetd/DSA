@@ -91,5 +91,5 @@ string binaryString = "011100";
 
 //await (new ThreadException()).Test();
 //await (new WaitAllAndWhenAll()).Test();
-new WaitAllAndWhenAll().Test1();
+new WaitAllAndWhenAll().Test();
 
